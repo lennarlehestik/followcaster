@@ -1,0 +1,474 @@
+.App {
+  text-align: center;
+}
+
+body{
+    background-color: #fdfdfd;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.landing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fdfdfd;
+}
+
+.landingtitle{
+  font-size: 72px;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-weight:800;
+  color:rgb(41, 41, 41);
+}
+
+.landingexplainer{
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+  color:rgb(41, 41, 41);
+  opacity:0.9;
+}
+
+.purple{
+  color:#7C65C1;
+}
+
+.navBar{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+  margin-top:100px;
+  font-size:24px;
+  font-weight:500;
+}
+
+.selectedNav{
+  color:#7C65C1;
+  transition: all 0.3s ease-in-out;
+}
+
+.itemNav{
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.buyercards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  margin-top:100px;
+  background-color: #fdfdfd;
+  padding-bottom:30px;
+  box-sizing: border-box;
+
+}
+
+.buyercard{
+  width:40vw;
+  height:auto;
+  background-color:white;
+  border-radius:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow:2px 2px 7px 0px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+  padding:30px;
+  box-sizing:border-box;
+  position:relative;
+
+}
+
+.buyercardname{
+  font-size:24px;
+  font-weight:600;
+  color:rgb(41, 41, 41);
+}
+
+.buyercardbio{
+  font-size:16px;
+  color:rgb(41, 41, 41);
+  opacity:0.8;
+}
+
+.followersGained{
+  font-size:16px;
+  color:rgb(41, 41, 41);
+  opacity:0.8;
+  font-weight:600;
+}
+
+.buyercardbuttons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width:100%;
+  margin-top:20px;
+  gap:10px;
+}
+
+.buyercardfollowclaimed{
+  background-color:white;
+  color:#7C65C1;
+  padding:10px 20px;
+  border-radius:5px;
+  border:1px solid #7C65C1;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.buyercardfollow{
+  background-color:#7C65C1;
+  color:white;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.buyercardfollow:hover{
+  background-color:#5a3f9c;
+}
+
+.buyercardhavefollowed{
+  background-color:#f5f5f5;
+  color:#7C65C1;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.balance{
+  position:absolute;
+  top:30px;
+  right:30px;
+  font-size:18px;
+  font-weight:600;
+  display: flex;
+  align-items: center;
+  gap:10px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.balance:hover{
+  transform: scale(1.1);
+  
+}
+
+.getfollowers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  margin-top:100px;
+  opacity:0;
+}
+
+.getfollowers, .buyercards, .landing{
+  animation: splash 1s normal forwards ease-in-out;
+  -webkit-animation: splash 1s normal forwards ease-in-out;
+  -moz-animation: splash 1s normal forwards ease-in-out;
+  -o-animation: splash 1s normal forwards ease-in-out;
+  -ms-animation: splash 1s normal forwards ease-in-out;
+}
+
+@keyframes splash {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.getfollowerstitle{
+  font-size: 28px;
+  font-weight: 600;
+  color:rgb(41, 41, 41);
+}
+
+.getfollowersdescription{
+  font-size: 18px;
+  color:rgb(41, 41, 41);
+  opacity:0.8;
+  text-align: left;
+}
+
+.getfollowedbutton{
+  background-color:#7C65C1;
+  color:white;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top:20px;
+  border:none;
+}
+
+.getfollowedbutton:hover{
+  background-color:#5a3f9c;
+}
+
+
+.fancySearchButton{
+  background-color:#7C65C1;
+  color:white;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  border:none;
+  text-wrap: nowrap;
+}
+
+.fancySearchButton:hover{
+  background-color:#5a3f9c;
+}
+
+
+.fancySearch{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width:40vw;
+  gap:10px;
+}
+
+@media screen and (max-width: 768px) {
+  .buyercard{
+    width:90vw;
+  }
+  .fancySearch{
+    width:90vw;
+  }
+  .buyercards{
+    margin-top:30px;
+  }
+  .navBar{
+    gap:20px;
+    font-size:18px;
+  }
+
+  .getfollowers{
+    width:90vw;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:30px;
+
+  }
+
+  .landing{
+    padding:20px;
+    box-sizing: border-box;
+    margin-top:20px;
+  }
+
+  .landingtitle{
+    font-size: 38px;
+  }
+
+  .landingexplainer{
+    font-size: 16px;
+    text-align: center;
+  }
+  
+}
+
+.swal2-container {
+  z-index: 20000 !important;
+}
+
+.coinbasebutton{
+  background-color:#7C65C1;
+  color:white;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  border:none;
+  margin-top:20px;
+}
+
+.draweraddress{
+  font-size:13px;
+  margin-top:10px;
+  color:#7C65C1;
+  padding:5px 10px;
+  border-radius:5px;
+  border: 2px solid #7C65C1;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  text-align:center;
+  word-break: break-all;
+}
+
+.coinbasebutton:hover{
+  background-color:#5a3f9c;
+}
+
+.getfollowerscard{
+  width:40vw;
+  height:auto;
+  background-color:white;
+  border-radius:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow:2px 2px 7px 0px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+  padding:30px;
+  box-sizing:border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .getfollowerscard{
+    width:90vw;
+    max-width: 90vw;
+  }
+}
+
+.drawerbalance{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items: center;
+  justify-content: center;
+  padding:30px;
+  box-sizing: border-box;
+}
+
+.drawerbalancetext{
+  font-size:24px;
+  font-weight:700;
+  color:rgb(41, 41, 41);
+}
+
+.landingbutton{
+  background-color:#7C65C1;
+  color:white;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top:20px;
+}
+
+.landingbutton:hover{
+  background-color:#5a3f9c;
+}
+
+.buildathon{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+  text-decoration: none;
+  font-size:16px;
+  font-weight:700;
+  color:black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:10px 20px;
+  gap:10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buildathon:hover{
+  background-color:#c7daff;
+}
+
+
+.howworks{
+  position:fixed;
+  top:20px;
+  right:20px;
+  font-size:14px;
+  cursor:pointer;
+  font-weight:500;
+}
+
+.tradeUniswap{
+  background-color:#ffffff;
+  color:#FF007B;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top:20px;
+  font-weight:500;
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.2);
+  display: flex;
+  gap:10px;
+}
+
+.tradeCoinbase{
+  background-color:#ffffff;
+  color:#0051FF;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top:20px;
+  font-weight:500;
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.2);
+  display: flex;
+  gap:10px;
+}
